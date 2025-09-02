@@ -20,3 +20,8 @@
 .card P {
   text-align: center;
 }
+
+.card span{
+  text-align: center;
+  display: block;
+}

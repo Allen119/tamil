@@ -10,9 +10,9 @@ function App() {
 
   return (
     <>
-      <Course name = "HTML" price = "$199" image={html}/>
-      <Course name = "CSS" price = "$198" image={css}/>
-      <Course name = "JS"/>
+      <Course name = {88} price = "$199" image={html} rating = {4}/>
+      <Course name = "CSS" price = "$198" image={css} rating = {4.5}/>
+      <Course name = "JS" price = "$199" image={html} rating = "4.6" />
     </>
   )
 }

@@ -1,7 +1,9 @@
 // import styles from "./Course.module.css";
 import html from "../assets/react.svg";
+import PropTypes from "prop-types";
+//npm install prop-types
 // const course1 = "HTML"
-function Course({ name = "code IO course", image = html, price = 456 }) {
+function Course(props) {
     const intStyle  = {
         backgroundColor : 'blue',
     }
@@ -9,13 +11,20 @@ function Course({ name = "code IO course", image = html, price = 456 }) {
         <div className='card'>
         {/* for index.css */}
         {/* <div className={styles.card}>  for external css */}
-            <img src={image} alt="" />
-            <h3>{name}</h3>
+            <img src={props.image} alt="" />
+            <h3>{props.name}</h3>
             {/* below is internal css */}
-            <p style={intStyle}>{price}</p>
+            <p style={intStyle}>{props.price}</p>
+            <span>{props.rating}</span>
         </div>
     );
 }
+
+Course.propTypes = {
+  name: PropTypes.string,
+  rating: PropTypes.number
+};
+
 
 
 export default Course;
