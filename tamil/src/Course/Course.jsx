@@ -1,15 +1,22 @@
 // import styles from "./Course.module.css";
 // import html from "../assets/react.svg";
 import PropTypes from "prop-types";
+import { useState } from "react";
 //npm install prop-types
 // const course1 = "HTML"
 
 
 
 function Course(props) {
+
+    // let purchased = false;
+    const [purchased, setPurchased] = useState(false);
+
     function clickHandle(discount,event){
-    console.log(props.name, "button clicked",discount);
-    console.log("event object",event);
+        console.log(props.name, "button clicked",discount);
+        console.log("event object",event);
+        setPurchased(!purchased);
+        console.log(purchased);
     }
 
     const intStyle  = {
@@ -25,6 +32,8 @@ function Course(props) {
             <p style={intStyle}>{props.price}</p>
             <span>{props.rating}</span>
             <button onClick={(event) => clickHandle(20,event)}>Buy Now</button>
+            <p>{purchased ? "Already Purchased": "Get it Now"}</p>
+            <button onClick={props.onDelete}>Delete</button>
         </div>
     );
 }
