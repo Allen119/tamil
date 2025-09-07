@@ -1,0 +1,27 @@
+
+.card{
+  background-color: beige;
+  max-width: 200px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-family: sans-serif;
+  padding: 2px;
+  display: inline-block;
+}
+
+.card img{
+  width: 200px;
+}
+
+.card h3 {
+  text-align: center;
+}
+
+.card P {
+  text-align: center;
+}
+
+.card span{
+  text-align: center;
+  display: block;
+}
