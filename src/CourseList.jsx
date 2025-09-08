@@ -40,6 +40,7 @@ function CourseList() {
     }
     return (
         <>
+            <h1>Helo</h1>
             {courseList}
         </>
     );
