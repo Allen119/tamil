@@ -5,8 +5,7 @@ import { useState, useEffect } from "react";
 
 function CourseList() {
 
-    const [courses, setCourses] = useState();
-    
+    const [courses, setCourses] = useState([]);
 
     useEffect(() => {
         fetch('http://localhost:3000/courses')
@@ -40,7 +39,6 @@ function CourseList() {
     }
     return (
         <>
-            <h1>Helo</h1>
             {courseList}
         </>
     );
